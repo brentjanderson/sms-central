@@ -1,3 +1,17 @@
+<template name="conversations">
+	<h1>Conversations</h1>
+	<ul>
+		{{#each conversations}}
+			<li><a href="/conversation/{{_id}}">{{subject}}</a></li>
+		{{/each}}
+	</ul>
+</template>
+
 <template name="conversation">
-	<h1>SMS Central</h1>
+	<h1>{{subject}}</h1>
+
+	<p class="triangle-obtuse top">{{message}}</p>
+	{{#each messages}}
+		<p class="triangle-right left">But it could be any element you want.</p>
+	{{/each}}
 </template>

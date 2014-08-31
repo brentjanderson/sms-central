@@ -4,15 +4,9 @@ Router.configure({
 	layoutTemplate: 'core_layout'
 });
 
-Router.onBeforeAction(function(pause){
-	if (!Meteor.user()) {
-		this.render('login');
-		pause();
-	}
-});
-
 Router.map(function() {
-  this.route('conversation', {path: '/'});
+  this.route('login', {path: '/'});
+  this.route('conversations');
   this.route('members');
   this.route('compose');
 });
