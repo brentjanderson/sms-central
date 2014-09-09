@@ -8,5 +8,3 @@ Conversations = new Meteor.Collection("conversations");
 // Message Code used to identify special messages like STOP or the initial message
 // Codes include: STOP, START, AUTH (For logging in from the website), unset if part of a conversation
 Messages = new Meteor.Collection("messages");
-
-SystemNumber = '+18016917644';
