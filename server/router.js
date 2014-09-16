@@ -35,6 +35,7 @@ Router.map(function() {
 		var member = Members.findOne({
 			number: fromNumber
 		});
+		
 		if (!lastConvo || (member && !member.subscribed)) {
 			// We don't know who this person is or what's going on
 			// Register them in the system!

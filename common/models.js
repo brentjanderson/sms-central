@@ -1,5 +1,8 @@
-// {name, number, groups: ["Ward"]}
+// {name, number, groups: ["groupIds"]}
 Members = new Meteor.Collection("members");
+
+// {name}
+Groups = new Meteor.Collection("groups");
 
 // {subject, groups: []}
 Conversations = new Meteor.Collection("conversations");

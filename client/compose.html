@@ -1,13 +1,17 @@
 <template name="compose">
 	<h1>Compose</h1>
 
-	<p>
-		Destination groups:
-		{{#each groups}}
-			<label><input type="checkbox"> {{name}}</label>
-		{{/each}}
-	</p>
+	<p><strong>Destination groups:</strong></p>
+	{{#each groups}}
+		<div class="checkbox">
+			<label>
+				<input type="checkbox">
+				{{name}}
+			</label>
+		</div>
+	{{/each}}
+
 	<h2>Message</h2>
-	<textarea cols="40" rows="3"></textarea><br/>
-	<button class="btn btn-primary">Send Message to {{count}} recipients</button>
+	<textarea cols="40" rows="3" class="form-control"></textarea><br/>
+	<button class="btn btn-primary" {{canSend}}>Send Message to {{count}} recipients</button>
 </template>

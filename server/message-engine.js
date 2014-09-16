@@ -3,7 +3,7 @@ twilioClient = Twilio(Meteor.settings.twilioSID, Meteor.settings.twilioAuth);
 Messages.find({sentReceived: false, direction: "outbound"}).observe({
 	added: function(doc) {
 		// Send message!
-		console.log("SENDING SMS ", doc);
+		// console.log("SENDING SMS ", doc);
 
 		if (doc.toNumber !== doc.fromNumber) {
 
@@ -12,7 +12,7 @@ Messages.find({sentReceived: false, direction: "outbound"}).observe({
 				from: doc.fromNumber,
 				body: doc.message
 			},function(err, data) {
-				console.log(err, data);
+				// console.log(err, data);
 			});
 		} else {
 			console.warn("Message ID " + doc._id + " caught in SMS loop. Not sending message.");

@@ -1,0 +1,13 @@
+<template name="member">
+	<h1>{{name}}</h1>
+	<h2>Groups</h2>
+	{{#each groups}}
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" {{isChecked}}>
+				{{name}}
+			</label>
+		</div>
+	{{/each}}
+
+</template>

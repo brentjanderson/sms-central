@@ -4,7 +4,15 @@
 	<table class="table table-hover table-bordered table-striped">
 		<tr><th>Name</th><th>Phone Number</th><th>Organizations</th></tr>
 		{{#each members}}
-			<tr><td><a href="/member/{{_id}}">{{name}}</a></td><td>{{phone}}</td><td>{{organizations}}</td></tr>
+			<tr><td><a href="/member/{{_id}}">{{name}}</a></td><td>{{number}}</td>
+				<td>
+					<ul>
+					{{#each organizations}}
+						<li>{{name}}</li>
+					{{/each}}
+					</ul>
+				</td>
+			</tr>
 		{{/each}}
 	</table>
 </template>
